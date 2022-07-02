@@ -6,7 +6,7 @@ import {
   Link
 } from 'react-router-dom';
 
-import Nav from './Nav';
+import Header from './Header';
 
 import Home from './screens/Home/Home';
 import About from './screens/About/About';
@@ -14,12 +14,13 @@ import Career from './screens/Career/Career';
 import Education from './screens/Education/Education';
 import Portfolio from './screens/Portfolio/Portfolio';
 
+
 import './App.css';
 
 function App() {
   return (
     <Router>
-      <Nav />
+      <Header />
       <div>
       <Routes>
       <Route path="/" exact element={<Home />} />

@@ -1,17 +1,17 @@
 import React from "react";
-import { Link } from "react-router-dom";
-
+// import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 const Nav = () => {
 
-    <nav>
+    return <nav>
         
         <ul>
 
-            <li><Link to='/'>Home</Link></li>
-            <li><Link to='/career'>Career</Link></li>
-            <li><Link to='/education'>Education</Link></li>
-            <li><Link to='/portfolio'>Portfolio</Link></li>
-            <li><Link to='/about'>About</Link></li>
+            <li><NavLink to='/'>Home</NavLink></li>
+            <li><NavLink to='/career'>Career</NavLink></li>
+            <li><NavLink to='/education'>Education</NavLink></li>
+            <li><NavLink to='/portfolio'>Portfolio</NavLink></li>
+            <li><NavLink to='/about'>About</NavLink></li>
 
         </ul>
 
