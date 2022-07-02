@@ -15,13 +15,13 @@ import Education from './screens/Education/Education';
 import Portfolio from './screens/Portfolio/Portfolio';
 
 
-import './App.css';
+import './App.scss';
 
 function App() {
   return (
     <Router>
       <Header />
-      <div>
+      <main>
       <Routes>
       <Route path="/" exact element={<Home />} />
       <Route path="/about" element={<About />} />
@@ -29,7 +29,7 @@ function App() {
       <Route path="/education" element={<Education />} />
       <Route path="/portfolio" element={<Portfolio />} />
       </Routes>
-      </div>
+      </main>
     </Router>
   );
 }
