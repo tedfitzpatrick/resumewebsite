@@ -1,8 +1,12 @@
 import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import { useToken } from "./../../auth/useToken";
+
 
 const SignIn = () => {
+    const [token, setToken] = useToken();
     const [errorMessage, setErrorMessage] = useState('');
     const [signInName, setSignInName] = useState('');
     const [signInPassword, setSignInPassword] = useState('');
@@ -10,8 +14,14 @@ const SignIn = () => {
     const navigate = useNavigate();
     
     const onSignInButtonUsed = async () => {
-        // TODO: sign in
-    };
+        const response = await axios.post('http://localhost:8000/signin', {
+            signInName: signInName,
+            signInPassword: signInPassword    
+        });
+        const { token } = response.data;
+        setToken(token);
+        navigate('/');
+    };    
     
     return (
     <div className='tf-signinform'>
