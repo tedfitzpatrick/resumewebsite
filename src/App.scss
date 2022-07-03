@@ -23,6 +23,49 @@ header {
     width: 100vw;
 }
 
+nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+
+    ul {
+
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+    
+
+        li {
+            list-style: none;
+            width: 20vw;
+            margin: 0;
+            padding: 0;
+
+            a {
+                
+            }
+            a.tf-navlinkhome {
+
+            }
+            a.tf-navlinkcareer {
+                
+            }
+            a.tf-navlinkeducation {
+                
+            }
+            a.tf-navlinkportfolio {
+                
+            }
+            a.tf-navlinkabout {
+                
+            }
+        }
+    }
+}
+
 main {
     margin-top: 200px;
     padding: 0;

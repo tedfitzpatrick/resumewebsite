@@ -7,11 +7,11 @@ const Nav = () => {
         
         <ul>
 
-            <li><NavLink to='/'>Home</NavLink></li>
-            <li><NavLink to='/career'>Career</NavLink></li>
-            <li><NavLink to='/education'>Education</NavLink></li>
-            <li><NavLink to='/portfolio'>Portfolio</NavLink></li>
-            <li><NavLink to='/about'>About</NavLink></li>
+            <li><NavLink to='/' className={'tf-navlinkhome'}>Home</NavLink></li>
+            <li><NavLink to='/career' className={'tf-navlinkcareer'}>Career</NavLink></li>
+            <li><NavLink to='/education' className={'tf-navlinkeducation'}>Education</NavLink></li>
+            <li><NavLink to='/portfolio' className={'tf-navlinkportfolio'}>Portfolio</NavLink></li>
+            <li><NavLink to='/about' className={'tf-navlinkabout'}>About</NavLink></li>
 
         </ul>
 

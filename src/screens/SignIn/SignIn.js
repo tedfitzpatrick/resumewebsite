@@ -19,9 +19,9 @@ const SignIn = () => {
         {errorMessage && <div>{errorMessage}</div>}
         <p>Please use name spongebob with password squarepants:</p>
         <form>
-            <label for="tf-inputsigninname">Name</label>
+            <label htmlFor="tf-inputsigninname">Name</label>
             <input id="tf-inputsigninname" value={signInName} onChange={(event)=>{setSignInName(event.target.value)}} />
-            <label for="tf-inputsigninpassword">Password</label>
+            <label htmlFor="tf-inputsigninpassword">Password</label>
             <input id="tf-inputsigninpassword" type="password" value={signInPassword} onChange={(event)=>{setSignInPassword(event.target.value)}} />
             <button onClick={onSignInButtonUsed} disabled={!signInName || !signInPassword}>Sign In</button>
         </form>
