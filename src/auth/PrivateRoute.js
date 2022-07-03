@@ -1,6 +1,6 @@
 import { Navigate, Route } from 'react-router-dom';
 
-const PrivateRoute = (props) => {
+const PrivateRoute = ({children}) => {
 
     const user = null;
 
@@ -8,7 +8,7 @@ const PrivateRoute = (props) => {
         return <Navigate to='/signin' />;
     }
 
-    return <Route {...props} />;
+    return children;
 
 };    
 
