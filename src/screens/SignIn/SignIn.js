@@ -14,11 +14,14 @@ const SignIn = () => {
     const navigate = useNavigate();
     
     const onSignInButtonUsed = async () => {
-        const response = await axios.post('http://localhost:8000/signin', {
+        // console.log("onSignInButtonUsed")
+        const response = await axios.post('/signin', {
             signInName: signInName,
             signInPassword: signInPassword    
         });
         const { token } = response.data;
+        // console.log("after axios post")
+        // console.log(token);
         setToken(token);
         navigate('/');
     };    
@@ -33,7 +36,7 @@ const SignIn = () => {
             <input id="tf-inputsigninname" value={signInName} onChange={(event)=>{setSignInName(event.target.value)}} />
             <label htmlFor="tf-inputsigninpassword">Password</label>
             <input id="tf-inputsigninpassword" type="password" value={signInPassword} onChange={(event)=>{setSignInPassword(event.target.value)}} />
-            <button onClick={onSignInButtonUsed} disabled={!signInName || !signInPassword}>Sign In</button>
+            <button onClick={(event)=>{event.preventDefault();onSignInButtonUsed()}} disabled={!signInName || !signInPassword}>Sign In</button>
         </form>
     </div>
     );

@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
-import useToken from "./useToken";
+import { useToken } from "./useToken";
 
-const useUser = () => {
+export const useUser = () => {
 
     const [token] = useToken();
 
     const getPayloadFromToken = (token) => {
             
         const encodedPayload = token.split('.')[1];
-        const payloadJSON = atob(payload);
+        const payloadJSON = atob(encodedPayload);
         return JSON.parse(payloadJSON);
     
     }
@@ -35,5 +35,3 @@ const useUser = () => {
     return user;
 
 }
-
-export default useUser;

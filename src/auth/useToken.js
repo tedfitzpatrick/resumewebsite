@@ -1,8 +1,8 @@
-import React from "react";
+import { useState } from "react";
 
-const useToken = () => {
+export const useToken = () => {
 
-    const [token, setTokenInternal] = React.useState(()=>{
+    const [token, setTokenInternal] = useState(()=>{
 
         return localStorage.getItem('token');
 
@@ -12,11 +12,9 @@ const useToken = () => {
 
         localStorage.setItem('token', newToken);
         setTokenInternal(newToken);
-
+  
     }    
 
     return [token, setToken];
 
 }
-
-export default useToken;
